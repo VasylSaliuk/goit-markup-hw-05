@@ -67,6 +67,14 @@ ul {
 
 /*Page header*/
 
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ECECEC;
+}
+
 .header {
     padding: 32px 15px;
     display: flex;
@@ -177,9 +185,7 @@ background-color: turquoise;
 .button-filter:hover,
 .button-filter:focus,
 .button:hover,
-.button:focus,
-.occupation-type:hover
-{
+.button:focus {
     margin: 0;
     color: var(--primary-white-color);
     background-color: var(--accent-color);
