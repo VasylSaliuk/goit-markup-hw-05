@@ -289,11 +289,7 @@
 .clients-link:hover,
 .clients-link:focus {
     border: 1px solid var(--accent-color);
-}
-
-.clients-link:hover .icon,
-.clients-link:focus .icon {
-    fill: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .item-clients:not(:nth-child(6n)) {
