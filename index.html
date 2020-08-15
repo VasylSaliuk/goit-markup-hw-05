@@ -59,38 +59,20 @@
     <section class="section hero">
       <div class="hero-section">
         <h1 class="section-title main-title">Эффективные решения <br> для вашего бизнеса</h1>
-        <button data-open-modal type="button" class="button main">Заказать услугу</button>
+        <button 
+          class="button main" type="button"
+          data-modal-open>Заказать услугу
+        </button>
       </div>
     </section>
     
     <!--Модальное окно-->
 
-    <div class="backdrop is-hidden" data-backdrop>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button data-close-modal type="button" class="button-close"></button>
+        <button data-modal-close type="button" class="button-close"></button>
       </div>
     </div>
-
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector("[data-open-modal"),
-        closeModalBtn: document.querySelector("[data-close-modal"),
-        backdrop: document.querySelector("[data-backdrop")
-      }
-
-      refs.openModalBtn.addEventListener("click", toggleModal);
-      refs.closeModalBtn.addEventListener("click", toggleModal);
-
-      refs.backdrop.addEventListener("click", logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle("is-hidden")
-      }
-
-      function logBackdropClick() {
-        console.log("Это клик в бекдроп");
-      }
-    </script>
 
     <!--Секция Особенности нашей работы-->
     <section class="section">
@@ -464,37 +446,40 @@
           </ul>
         </address>
              
-          <div class="appeal flex">
-            <b class="appeal-text">Присоединяйтесь</b>
-            <ul class="social-list">
-             <li class="social-item">
-               <a class="social-link insta" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-               </a>
-             </li>
+        <div class="appeal flex">
+          <b class="appeal-text">Присоединяйтесь</b>
+          <ul class="social-list">
+            <li class="social-item">
+              <a class="social-link insta" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              </a>
+            </li>
 
-             <li class="social-item">
-               <a class="social-link twit" href="https://Twitter.com" target="_blank" rel="noopener noreferrer">
-               </a>
-             </li>
+            <li class="social-item">
+              <a class="social-link twit" href="https://Twitter.com" target="_blank" rel="noopener noreferrer">
+              </a>
+            </li>
 
-             <li class="social-item">
-               <a class="social-link fb" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-               </a>
-             </li>
+            <li class="social-item">
+              <a class="social-link fb" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              </a>
+            </li>
 
-             <li class="social-item">
-               <a class="social-link li" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-               </a>
-             </li>
-            </ul>
-         </div>
+            <li class="social-item">
+              <a class="social-link li" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              </a>
+            </li>
+          </ul>
+        </div>
 
-         <div class="appeal sign flex">
-           <b class="appeal-text">Подпишитесь на рассылку</b>
-           <span class="e-mail">E-mail</span>
-           <button type="button" class="button">Подписаться </button>
-         </div>
+        <div class="appeal sign flex">
+          <b class="appeal-text">Подпишитесь на рассылку</b>
+          <span class="e-mail">E-mail</span>
+          <button 
+            type="button" class="button">Подписаться 
+          </button>
+        </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

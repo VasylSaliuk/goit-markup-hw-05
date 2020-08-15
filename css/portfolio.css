@@ -1,3 +1,7 @@
+header {
+    border-bottom: 1px solid #ECECEC;
+}
+
 .filter {
     margin-bottom: 50px;
     display: flex;
@@ -18,10 +22,15 @@
     text-align: center;
     border-radius: 4px;
     border: 0;
+    transition: background-color 250ms var(--timing-function);
 }
 
 .button-filter:hover,
 .button-filter:focus {
+    margin: 0;
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -34,17 +43,14 @@
     /*width: 370px;*/
     width: calc((100% - 30px*2)/3);
     margin-right: 30px;
-    border: 1px solid #EEEEEE;
+}
 
+.card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-link {
     position: relative;
-}
-
-.text-hover-card:hover,
-.text-hover-card:focus {
-    opacity: 1;
 }
 
 .card:nth-child(3n) {
@@ -57,12 +63,16 @@
 
 .photo-card {
     display: block;
-    margin-bottom: 20px;
+    width: 100%;
+}
+
+.border-card {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
 }
 
 .name-card {
     margin-bottom: 4px;
-    padding: 0 24px;
     font-weight: bold;
     font-size: 18px;
     line-height: 2;
@@ -71,8 +81,6 @@
 }
 
 .type-card {
-    margin-bottom: 20px;
-    padding: 0 24px;
     font-size: 16px;
     line-height: 1.88;
 }
@@ -82,15 +90,21 @@
     top: 0ex;
     left: 0px;
     opacity: 0;
-    display: flex;
+    pointer-events: none;
     overflow: hidden;
-    padding: 63px 24px;
-    display: inline-block;
+    padding: 64px 24px;
     width: 370px;
     height: 294px;
     font-size: 18px;
     line-height: 1.56;
     color: var(--primary-white-color);
     background-color: rgba(33, 150, 243, 0.9);
+    transition: 250ms var(--timing-function);
+    transform: translateY(100%);
 }
 
+.card-link:hover .text-hover-card,
+.card-link:focus .text-hover-card {
+    opacity: 1;
+    transform: translateY(0px);
+}
