@@ -223,6 +223,22 @@ background-color: turquoise;
         transform 250ms var(--timing-function);
 }
 
+/*.button.main {
+    color: rgba(255,255,255,0.9);
+    background-color: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+    background-size: 600%;
+    animation: anime 16s linear infinite;
+}
+
+@keyframes anime {
+   0% {
+     background-position 0% 50%;
+   }
+   50% 
+     {background-position 100% 50%; }
+   100%
+     {background-position 0% 50%; }
+}*/
  /*Стилизация футера*/
 
 footer {
@@ -335,7 +351,7 @@ footer {
 .footer .social-link:hover,
 .footer .social-link:focus {
     background-color: var(--accent-color);
-    transform: scale(1.25);
+    transform: scale(1.5);
 }
 
 .appeal.sign {
