@@ -36,6 +36,7 @@
     margin: 0;
     background-color: rgba(33, 150, 243, 0.7);
     cursor: pointer;
+    transform: scale(1.25);
 }
 
 /*Модальное окно*/
@@ -59,7 +60,7 @@
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.1);
 }
 
 .modal {
